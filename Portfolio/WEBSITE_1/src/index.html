@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PORTFOLIO</title>
+
+    <!-- Font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <!-- <div class="me-2 bg-primary rounded-2" style="width:36px;height:28px;"></div>
+                <span class="fw-semibold" style="color:#29b6ff">Sa<span style="color:#8ee1ff">h</span>il</span> -->
+               <span class="logo">SAHIL</span>
+            </a>
+
+            <button class="navbar-toggler border-0" style="color:#29b6ff" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active px-3" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- social icons -->
+            <div class="d-none d-lg-flex align-items-center gap-2">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a>
+                <a href="https://www.pinterest.com/pin/420805158903886684/"><i class="fa-brands fa-pinterest-p"
+                        style="color: #ffffff;"></i></a>
+                <a href="https://www.instagram.com/instagram/?hl=en"><i class="fa-brands fa-instagram"
+                        style="color: #ffffff;"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="border-bottom"></div>
+
+    <!-- HERO -->
+    <header class="container py-5 position-relative" style="z-index:1;">
+        <div class="row align-items-center" style="min-height:70vh;">
+            <div class="col-12 text-center">
+
+                <!-- Hand -->
+                <div class="d-flex justify-content-center align-items-center gap-3 mt-0">
+                    <div style="font-size:3rem;">👋</div>
+                    <h1 class="h1 text-white mt-2">My name is Sahil Gohil a freelancer</h1>
+                </div>
+
+                <!-- big Photographer  -->
+                <!-- <div class="position-relative d-flex justify-content-center align-items-center">
+                <div class="bg-outline position-absolute container" style="font-size:10rem;">Photographer</div> -->
+
+                <!-- profile image sits above the big word -->
+                <img src="images/main-demo.webp" alt="profile"
+                    class="profile-img mx-auto img-fluid d-block position-relative " />
+            </div>
+        </div>
+    </header>
+
+    <!-- vertical side badge (right) -->
+    <div class="position-fixed end-0 top-50 translate-middle-y me-3 d-none d-md-block" style="z-index:3;">
+        <div class="side-badge">34+ PRE-BUILT SITES</div>
+    </div>
+
+    <!-- messenger floating button bottom-left -->
+    <div class="position-fixed start-0 bottom-0 m-4" style="z-index:5;">
+        <div class="messenger-btn">
+            <!-- simple icon letter -->
+            <span class="text-white fw-bold">💬</span>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section class="container py-5">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5">
+                <div class="glow-box">
+                    <img src="images/01.webp" class="img-fluid rounded-4">
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <p class="text-info fw-semibold mb-1">ABOUT ME</p>
+                <h2 class="fw-bold mb-3">Boost Business Strategic <br> Solutions With Us</h2>
+                <p>
+                    Business consulting consultants provide expert advice and guide businesses to
+                    improve performance, efficiency & organization.
+                </p>
+
+                <div class="row g-3 mt-4">
+                    <div class="col-md-6">
+                        <div class="service-box">
+                            <div class="icon-circle">📎</div>
+                            <h5 class="fw-bold">Business</h5>
+                            <p class="mb-0">Each one showcases my approach</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="service-box">
+                            <div class="icon-circle">📣</div>
+                            <h5 class="fw-bold">Partners</h5>
+                            <p class="mb-0">Business consulting helps to provide solutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-outline-info mt-4 px-4 py-2 rounded-pill">
+                    Read More About Me →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="container py-3">
+        <div class="row text-center g-3">
+            <div class="col-6 col-md-3">
+                <div class="stats-box">
+                    <h3 class="fw-bold">20k</h3>
+                    <p>Our Projects</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="stats-box">
+                    <h3 class="fw-bold">10k</h3>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="stats-box">
+                    <h3 class="fw-bold">200+</h3>
+                    <p>Global Awards</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="stats-box">
+                    <h3 class="fw-bold">2k+</h3>
+                    <p>Our Active Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container py-5">
+        <p class="text-center section-title">HELLO WORLD</p>
+        <h2 class="text-center mb-5">What I Provide For You</h2>
+        <div class="row g-4">
+
+            <!-- UI/UX -->
+            <div class="col-md-6">
+                <div class="service-card h-100">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-code" style="color: #ffffff;"></i>
+                    </div>
+                    <h5 class="fw-bold">UI/UX Design</h5>
+                    <p>Each one showcases my approach and dedication to detail, creativity and modern design.</p>
+                </div>
+            </div>
+
+            <!-- Web Dev -->
+            <div class="col-md-6">
+                <div class="service-card h-100">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-paint-roller" style="color: #ffffff;"></i>
+                    </div>
+                    <h5 class="fw-bold">Web Development</h5>
+                    <p>I provide expert advice and creative solutions for all modern web development needs.</p>
+                </div>
+            </div>
+
+            <!-- Business -->
+            <div class="col-md-6">
+                <div class="service-card h-100">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-print" style="color: #fafafa;"></i>
+                    </div>
+                    <h5 class="fw-bold">Business Solutions</h5>
+                    <p>Strategies & tools designed to improve business efficiency, profitability, and operations.</p>
+                </div>
+            </div>
+
+            <!-- Profit Partners -->
+            <div class="col-md-6">
+                <div class="service-card h-100">
+                    <div class="icon-box">
+                        <i class="fa-sharp fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h5 class="fw-bold">Profit Partners</h5>
+                    <p>We collaborate to maximize revenue, streamline operations, and drive long-term success.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Skill -->
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- LEFT SIDE TEXT -->
+                <div class="col-lg-5 mb-5">
+                    <p class="text-info fw-semibold">MY SKILL</p>
+                    <h2 class="fw-bold">My Experts Areas Where I<br>Gained Skill</h2>
+                    <p class="mt-3">
+                        Business consulting consultants provide expert advice and
+                        guide businesses to help them improve their performance,
+                        efficiency, and organizational structure.
+                    </p>
+                </div>
+
+                <!-- RIGHT SIDE CARDS -->
+                <div class="col-lg-7">
+                    <div class="row g-4">
+
+                        <!-- Card 1 -->
+                        <div class="col-md-6">
+                            <div class="p-4 border rounded-3 h-100">
+                                <div class="mb-3">
+                                    <div class="rounded-circle border border-info d-inline-flex 
+                                justify-content-center align-items-center" style="width:60px; height:60px;">
+                                        <img src="images/icon-01.webp" alt="icon">
+                                    </div>
+                                </div>
+                                <h5 class="fw-bold">Framer</h5>
+                                <p class="small text-secondary">Portfolio creation & website building tool.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-md-6">
+                            <div class="p-4 border rounded-3 h-100">
+                                <div class="mb-3">
+                                    <div class="rounded-circle border border-info d-inline-flex 
+                                justify-content-center align-items-center" style="width:60px; height:60px;">
+                                        <img src="images/icon-02.webp" alt="icon" style="background-color: #ffffff;">
+                                    </div>
+                                </div>
+                                <h5 class="fw-bold">Webflow</h5>
+                                <p class="small text-secondary">A powerful visual website design platform.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-md-6">
+                            <div class="p-4 border rounded-3 h-100">
+                                <div class="mb-3">
+                                    <div class="rounded-circle border border-info d-inline-flex 
+                                justify-content-center align-items-center" style="width:60px; height:60px;">
+                                        <img src="images/icon-03.webp" alt="icon">
+                                    </div>
+                                </div>
+                                <h5 class="fw-bold">Figma</h5>
+                                <p class="small text-secondary">Design tool enabling team collaboration.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col-md-6">
+                            <div class="p-4 border rounded-3 h-100">
+                                <div class="mb-3">
+                                    <div class="rounded-circle border border-info d-inline-flex 
+                                justify-content-center align-items-center" style="width:60px; height:60px;">
+                                        <img src="images/icon-04.webp" alt="icon">
+                                    </div>
+                                </div>
+                                <h5 class="fw-bold">WordPress</h5>
+                                <p class="small text-secondary">CMS for building websites easily.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Latest Portfolio -->
+    <section class="py-5 text-center">
+        <p class="text-info fw-semibold mb-2" style="letter-spacing: 3px;">LATEST PORTFOLIO</p>
+        <h2 class="section-title mb-3">Transforming Ideas into Exceptional</h2>
+        <p class="sub-text mb-5 px-3">
+            Business consulting consultants provide expert advice and guida businesses
+            to help them improve their performance, efficiency, and organizational
+            management.
+        </p>
+
+        <!-- Buttons Row -->
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <button class="filter-btn active-btn">All</button>
+            <button class="filter-btn">Adobe</button>
+            <button class="filter-btn">Ai</button>
+            <button class="filter-btn">Webflow</button>
+            <button class="filter-btn">Javascript</button>
+            <button class="filter-btn">Figma</button>
+        </div>
+    </section>
+
+    <!-- IMAGES -->
+
+    <div class="container py-5">
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+            <div class="col-md-6">
+                <div class="portfolio-card">
+                    <div class="portfolio-img">
+                        <img src="images/portfoli-img-1.webp" alt="portfoli-img-1.webp">
+                    </div>
+
+                    <h2 class="portfolio-title">Saas Website Design</h2>
+
+                    <div class="mt-2">
+                        <span class="tag">Adobe</span>
+                        <span class="tag">Ai</span>
+                    </div>
+
+                    <div class="text-end mt-3">
+                        <button class="view-btn">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6">
+                <div class="portfolio-card">
+                    <div class="portfolio-img">
+                        <img src="images/portfoli-img-3.webp" alt="image">
+                    </div>
+
+                    <h2 class="portfolio-title">Workout App Design</h2>
+
+                    <div class="mt-2">
+                        <span class="tag">Adobe</span>
+                        <span class="tag">Javascript</span>
+                    </div>
+
+                    <div class="text-end mt-3">
+                        <button class="view-btn">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6">
+                <div class="portfolio-card">
+                    <div class="portfolio-img">
+                        <img src="images/portfoli-img-4.webp" alt="image">
+                    </div>
+
+                    <h2 class="portfolio-title">Business Analytics</h2>
+
+                    <div class="mt-2">
+                        <span class="tag">Figma</span>
+                        <span class="tag">Javascript</span>
+                    </div>
+
+                    <div class="text-end mt-3">
+                        <button class="view-btn">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6">
+                <div class="portfolio-card">
+                    <div class="portfolio-img">
+                        <img src="images/portfoli-img-2.webp" alt="image">
+                    </div>
+
+                    <h2 class="portfolio-title">Dashbord Design</h2>
+
+                    <div class="mt-2">
+                        <span class="tag">Adobe</span>
+                        <span class="tag">Webflow</span>
+                    </div>
+
+                    <div class="text-end mt-3">
+                        <button class="view-btn">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MY PRICE PLAN -->
+    <section class="py-5 text-center">
+        <div class="container">
+            <div class="section-label">MY PRICE PLAN</div>
+            <h1 class="main-heading mt-2">
+                Enhancing Collaboration<br>
+                between Remote
+            </h1>
+        </div>
+    </section>
+
+    <!-- PRICE CARD -->
+    <div class="container py-5">
+        <div class="row g-4">
+
+            <!-- Starter -->
+            <div class="col-lg-4">
+                <div class="price-card">
+                    <h5>Starter</h5>
+                    <div class="price-value">$ 5.00</div>
+                    <p class="mb-1">Per Month</p>
+                    <hr>
+                    <div class="feature-item"><i class="fa-solid fa-circle-check"></i>5 Social Media Account</div>
+                    <div class="feature-item"><i class="fa-solid fa-circle-check"></i>Free Platform Access</div>
+                    <div class="feature-item"><i class="fa-solid fa-circle-check"></i>24/7 Customer Support</div>
+                    <button class="btn btn-custom mt-4">Get Started →</button>
+                </div>
+            </div>
+
+            <!-- Pro -->
+            <div class="col-lg-4">
+                <div class="price-card">
+                    <h5>Pro</h5>
+                    <div class="price-value">$ 230.00</div>
+                    <p class="mb-1">Per Month</p>
+                    <hr>
+                    <div class="feature-item"><i class="fa-solid fa-circle-check"></i>5 Social Media Account</div>
+                    <div class="feature-item"><i class="fa-solid fa-circle-check"></i>Free Platform Access</div>
+                    <div class="feature-item"><i class="fa-solid fa-circle-check"></i>Marketing Platform</div>
+                    <div class="feature-item"><i class="fa-solid fa-circle-check"></i>24/7 Customer Support</div>
+                    <div class="feature-item"><i class="fa-solid fa-circle-check"></i>Life time support</div>
+                    <button class="btn btn-custom mt-4">Get Started →</button>
+                </div>
+            </div>
+
+            <!-- Medium -->
+            <div class="col-lg-4">
+                <div class="price-card">
+                    <h5>Medium</h5>
+                    <div class="price-value">$ 45.00</div>
+                    <p class="mb-1">Per Month</p>
+                    <hr>
+                    <div class="feature-item"><i class="fa-solid fa-circle-check"></i>15 Social Media Account</div>
+                    <div class="feature-item"><i class="fa-solid fa-circle-check"></i>Free Platform Access</div>
+                    <div class="feature-item"><i class="fa-solid fa-circle-check"></i>24/7 Customer Support</div>
+                    <button class="btn btn-custom mt-4">Get Started →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- LATEST NEWS -->
+    <section class="py-5 text-center">
+        <div class="container">
+
+            <!-- Section Top Title -->
+            <div class="news-section-title">LATEST NEWS</div>
+            <h2 class="news-heading mt-2">
+                Transforming Ideas into Exceptional <br>
+                the man can Creations
+            </h2>
+
+            <div class="row mt-5 g-4">
+
+                <!-- Card 1 -->
+                <div class="col-lg-4">
+                    <div class="news-card">
+                        <img src="images/ai-generated-image-73.webp" class="news-img">
+                        <div class="p-4">
+                            <div class="d-flex gap-3 author-row mb-2">
+                                <span><i class="fa-solid fa-user"></i> Alan Walker</span>
+                                <span><i class="fa-regular fa-comment"></i> 0 Comments</span>
+                            </div>
+                            <div class="news-title">
+                                How To Create Awesome Design Using Photoshop
+                            </div>
+                            <button class="btn btn-news mt-4">Read More →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4">
+                    <div class="news-card">
+                        <img src="images/ai-generated-image-65.webp" class="news-img">
+                        <div class="p-4">
+                            <div class="d-flex gap-3 author-row mb-2">
+                                <span><i class="fa-solid fa-user"></i> Alan Walker</span>
+                                <span><i class="fa-regular fa-comment"></i> 0 Comments</span>
+                            </div>
+                            <div class="news-title">
+                                From Dev to Blog Exploring the World of Development
+                            </div>
+                            <button class="btn btn-news mt-4">Read More →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4">
+                    <div class="news-card">
+                        <img src="images/ai-generated-image-67.webp" class="news-img">
+                        <div class="p-4">
+                            <div class="d-flex gap-3 author-row mb-2">
+                                <span><i class="fa-solid fa-user"></i> Alan Walker</span>
+                                <span><i class="fa-regular fa-comment"></i> 0 Comments</span>
+                            </div>
+                            <div class="news-title">
+                                Dev Diaries Stories, Tips, and Tutorials from a Developer
+                            </div>
+                            <button class="btn btn-news mt-4">Read More →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <div class="container my-5">
+        <div class="row contact-box">
+
+            <!-- LEFT SIDE -->
+            <div class="col-lg-5">
+                <div class="left-box">
+                    <h1>Get Ready To<br>Create Great</h1>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <small>E-mail:</small><br>
+                            example@domain.com
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <small>Location:</small><br>
+                            3891 Ranchview Dr. Richardson
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <small>Contact:</small><br>
+                            +1 (643) 550-05-90
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="col-lg-7 mt-5 mt-lg-0 px-lg-5">
+                <h6 class="text-uppercase mb-4">Get in Touch</h6>
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Phone Number">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Your Subject">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control" placeholder="Your Message"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-submit w-100" type="submit">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+        <div class="container py-5" style="background-color: #0d2230 ">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 text-center">
+                    <span class="h2  fw-semibold" style="color:#29b6ff">Sa<span style="color:#8ee1ff">h</span>il</span>
+
+                    <!-- Copyright -->
+                    <p class="mb-0 text-secondary">
+                        © 2023 Mindgrasp™ Inc. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

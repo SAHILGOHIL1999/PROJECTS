@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Images/grocery_icon.png">
+    <title>E-Grocery Super Market</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="External_Css/Pr_2.css">
+</head>
+
+<body>
+    <div class="search-content">
+        <!-- Left Side -->
+        <div class="text-area">
+            <h2>E-Grocery Super Market</h2>
+            <p>Whatever the occasion, we've got you covered.</p>
+
+            <!-- Search Engine -->
+            <div class="search-box">
+                <input type="text" name="search" placeholder="Search E-Grocery Super Market" size="30">
+                <button><i class="fa-solid fa-magnifying-glass" style="color: #a0a0a2;"></i></button>
+            </div>
+        </div>
+
+        <!-- Right Side (Image) -->
+        <div class="image-area">
+            <img src="Images/grocery_header.png" alt="Grocery">
+        </div>
+    </div>
+
+    <!-- Scroll (Price/Filter) -->
+    <div class="scroll-section">
+        <div class="scroll-content">
+
+            <!-- Price Select -->
+            <select name="amount">
+                <option value="10 to 200">10 to 200</option>
+                <option value="201 to 500">201 to 500</option>
+                <option value="501 to 1000">501 to 1000</option>
+            </select>
+
+            <!-- Price Filter -->
+            <select name="price filters">
+                <option>Sort by: Featured</option>
+                <option value="popularity">Popularity</option>
+                <option value="discount high to low">Discount: High to Low</option>
+                <option value="price low to high">Price: Low to High</option>
+                <option value="price high to low">Price: High to low</option>
+                <option value="customer top rated">Customer top rated</option>
+                <option value="New Arrivals">New Arrivals</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Products Cart -->
+    <div class="product-container">
+        <div class="product-card">
+            <img src="Images/popcorn.jpeg" alt="Popcorn" class="product-image" />
+            <div class="product-name">Salted Island Popcorn</div>
+            <div class="rating">
+                <div class="stars">★★★★☆</div>
+                <div class="rating-text">(12)</div>
+            </div>
+            <div class="product-price">$41.00</div>
+            <button class="add-button">Add</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Images/cadbury.webp" alt="Silk Chocolate" class="product-image" />
+            <div class="product-name">Cadbury's Silk Chocolate</div>
+            <div class="rating">
+                <div class="stars">★★★★★</div>
+                <div class="rating-text">(89)</div>
+            </div>
+            <div class="product-price">$32.00</div>
+            <button class="add-button">Add</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Images/basmati.webp" alt="Rice Bucket" class="product-image" />
+            <div class="product-name">Basmati's Rice Bucket</div>
+            <div class="rating">
+                <div class="stars">★★★☆☆</div>
+                <div class="rating-text">(34)</div>
+            </div>
+            <div class="product-price">$24.00</div>
+            <button class="add-button">Add</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Images/yogurt.png" alt="Greek Yogurt" class="product-image" />
+            <div class="product-name">Blueberry Greek Yogurt</div>
+            <div class="rating">
+                <div class="stars">★★★★☆</div>
+                <div class="rating-text">(56)</div>
+            </div>
+            <div class="product-price">$14.00</div>
+            <button class="add-button">Add</button>
+        </div>
+    </div>
+</body>
+
+</html>
