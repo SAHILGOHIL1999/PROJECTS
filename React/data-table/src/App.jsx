@@ -10,9 +10,8 @@ function App() {
   const [sort, setSort] = useState("asc");
   const [cityFilter, setCityFilter] = useState("");
   const [page, setPage] = useState(1);
-  const limit = 5; // 5 rows per page requirement
+  const limit = 5; 
 
-  // Fetch Data from JSONPlaceholder [cite: 63, 64, 65]
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then(res => res.json())
