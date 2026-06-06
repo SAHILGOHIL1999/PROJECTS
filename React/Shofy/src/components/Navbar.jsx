@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/images/logo/"
+import logo from "../assets/images/logo/logo.svg";
 import home_1 from "../assets/images/menu/menu-home-1.jpg";
 import home_2 from "../assets/images/menu/menu-home-2.jpg";
 import home_3 from "../assets/images/menu/menu-home-3.jpg";
@@ -8,123 +8,111 @@ import home_4 from "../assets/images/menu/menu-home-4.jpg";
 import home_5 from "../assets/images/menu/menu-home-5.jpg";
 
 const HOME_DROPDOWN_ITEMS = [
-    { id: 1, title: "Electronics", img: home_1 },
-    { id: 2, title: "Fashion", img: home_2 },
-    { id: 3, title: "Beauty", img: home_3 },
-    { id: 4, title: "Jewelry", img: home_4 },
-    { id: 5, title: "Grocery", img: home_5 }
+    { id: 1, title: "Electronics", img: home_1, path: "/home/electronics" },
+    { id: 2, title: "Fashion", img: home_2, path: "/home/fashion" },
+    { id: 3, title: "Beauty", img: home_3, path: "/home/beauty" },
+    { id: 4, title: "Jewelry", img: home_4, path: "/home/jewelry" },
+    { id: 4, title: "Grocery", img: home_5, path: "/home/grocery" }
 ];
 
 const Navbar = () => {
+    const navLinkClasses = ({ isActive }) =>
+        `hover:text-[#7a1533] transition-colors py-2 flex items-center gap-1 ${isActive ? "text-[#7a1533] font-bold" : "text-gray-800"
+        }`;
+
     return (
-        <>
-            <nav className="bg-white border-b sticky top-0 z-50">
-                <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 font-sans">
+            <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between gap-4">
 
-                    <div className="flex items-center">
-                        <NavLink to="/">
-                            <img src="/assets/images/logo/logo.svg" alt="Shofy" className="h-10" />
+                {/* Logo */}
+                <div className="flex-shrink-0">
+                    <NavLink to="/">
+                        <img src={logo} alt="Shofy Logo" className="h-9 w-auto" />
+                    </NavLink>
+                </div>
+
+                {/* 2. Middle Section: Navigation Links & Mega Menu */}
+                <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-[15px] font-medium tracking-wide">
+
+                    {/* Home Link with Mega Menu Panel Wrapper */}
+                    <div className="relative group flex items-center h-full cursor-pointer">
+                        <NavLink to="/" className={navLinkClasses}>
+                            Home
+                            <i className="fas fa-chevron-down text-[9px] text-gray-400 group-hover:text-[#7a1533] transition-transform duration-300 group-hover:rotate-180"></i>
                         </NavLink>
-                    </div>
 
-                    <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-                        <div className="relative group flex items-center py-2">
-                            <NavLink
-                                to="/"
-                                className={({ isActive }) =>
-                                    `hover:text-[#7a1533] flex items-center gap-1 transition-colors ${isActive ? "text-[#7a1533] font-bold" : "text-gray-600"
-                                    }`
-                                }
-                            >
-                                Home
-                                <i className="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
-                            </NavLink>
-
-                            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[90vw] max-w-6xl bg-white border border-gray-100 shadow-xl rounded-2xl p-6 opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 mt-2">
-                                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-                                    {HOME_DROPDOWN_ITEMS.map((item) => (
-                                        <NavLink
-                                            key={item.id}
-                                            to={item.path}
-                                            className="group/item flex flex-col items-center text-center p-2 rounded-xl hover:bg-gray-50 transition"
-                                        >
-                                            <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border border-gray-200 bg-gray-100 shadow-sm transition group-hover/item:border-[#7a1533]">
-                                                <img
-                                                    src={item.img}
-                                                    alt={`${item.title} Thumbnail`}
-                                                    className="w-full h-full object-cover transition duration-500 group-hover/item:scale-105"
-                                                    onError={(e) => {
-                                                        e.target.src = "https://placehold.co/400x300?text=" + item.title;
-                                                    }}
-                                                />
-                                            </div>
-                                            <span className="mt-3 block text-sm font-medium text-gray-700 transition group-hover/item:text-[#7a1533]">
-                                                {item.title}
-                                            </span>
-                                        </NavLink>
-                                    ))}
-                                </div>
+                        {/* Mega Menu Overlay Dropdown Container */}
+                        <div className="absolute top-full left-0 w-[82vw] max-w-[1150px] bg-white border border-gray-100 shadow-xl rounded-2xl p-6 opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 mt-1">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+                                {HOME_DROPDOWN_ITEMS.map((item) => (
+                                    <NavLink
+                                        key={item.id}
+                                        to={item.path}
+                                        className="group/item flex flex-col items-center text-center p-1 rounded-xl transition"
+                                    >
+                                        <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-gray-100 bg-gray-50 shadow-sm transition-all duration-300 group-hover/item:border-[#7a1533] group-hover/item:shadow-md">
+                                            <img
+                                                src={item.img}
+                                                alt={`${item.title} Preview`}
+                                                className="w-full h-full object-cover transition duration-500 group-hover/item:scale-105"
+                                                onError={(e) => {
+                                                    e.target.src = `https://placehold.co/400x300?text=${item.title}`;
+                                                }}
+                                            />
+                                        </div>
+                                        <span className="mt-3 block text-sm font-medium text-gray-600 transition duration-200 group-hover/item:text-[#7a1533]">
+                                            {item.title}
+                                        </span>
+                                    </NavLink>
+                                ))}
                             </div>
                         </div>
-
-                        <NavLink
-                            to="/shop"
-                            className={({ isActive }) => `hover:text-[#7a1533] ${isActive ? "text-[#7a1533] font-bold" : "text-gray-600"}`}
-                        >
-                            Shop
-                        </NavLink>
-                        <NavLink
-                            to="/products"
-                            className={({ isActive }) => `hover:text-[#7a1533] ${isActive ? "text-[#7a1533] font-bold" : "text-gray-600"}`}
-                        >
-                            Products
-                        </NavLink>
-                        <NavLink
-                            to="/coupons"
-                            className={({ isActive }) => `hover:text-[#7a1533] ${isActive ? "text-[#7a1533] font-bold" : "text-gray-600"}`}
-                        >
-                            Coupons
-                        </NavLink>
-                        <NavLink
-                            to="/blog"
-                            className={({ isActive }) => `hover:text-[#7a1533] ${isActive ? "text-[#7a1533] font-bold" : "text-gray-600"}`}
-                        >
-                            Blog
-                        </NavLink>
-                        <NavLink
-                            to="/contact"
-                            className={({ isActive }) => `hover:text-[#7a1533] ${isActive ? "text-[#7a1533] font-bold" : "text-gray-600"}`}
-                        >
-                            Contact
-                        </NavLink>
                     </div>
-
-                    <div className="flex-1 max-w-md mx-8">
-                        <div className="relative">
-                            <input
-                                type="text"
-                                placeholder="Search for Products..."
-                                className="w-full bg-gray-100 rounded-full py-3 px-5 text-sm focus:outline-none"
-                            />
-                            <i className="fas fa-search absolute right-4 top-3.5 text-gray-500"></i>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center gap-6 text-xl">
-                        <i className="fas fa-exchange-alt cursor-pointer hover:text-[#7a1533]"></i>
-                        <div className="relative cursor-pointer">
-                            <i className="far fa-heart"></i>
-                            <span className="absolute -top-1 -right-1 bg-[#7a1533] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">4</span>
-                        </div>
-                        <div className="relative cursor-pointer">
-                            <i className="fas fa-shopping-bag"></i>
-                            <span className="absolute -top-1 -right-1 bg-[#7a1533] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">13</span>
-                        </div>
-                    </div>
-
+                    <NavLink to="/shop" className={navLinkClasses}>Shop</NavLink>
+                    <NavLink to="/products" className={navLinkClasses}>Products</NavLink>
+                    <NavLink to="/coupons" className={navLinkClasses}>Coupons</NavLink>
+                    <NavLink to="/blog" className={navLinkClasses}>Blog</NavLink>
+                    <NavLink to="/contact" className={navLinkClasses}>Contact</NavLink>
                 </div>
-            </nav>
-        </>
+
+                <div className="flex-1 max-w-md mx-4 hidden md:block">
+                    <div className="relative">
+                        <input
+                            type="text"
+                            placeholder="Search for Products..."
+                            className="w-full bg-[#f3f5f6] text-gray-700 rounded-full py-2.5 pl-5 pr-12 text-[14px] border border-transparent focus:bg-white focus:border-gray-200 focus:outline-none transition-all placeholder-gray-400"
+                        />
+                        <button type="submit" className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-[#7a1533] transition-colors">
+                            <i className="fas fa-search text-[14px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                {/*  Right Section: Action Utilities Icons */}
+                <div className="flex items-center gap-5 text-gray-700 text-lg">
+                    <button className="hover:text-[#7a1533] p-1.5 transition-colors relative" aria-label="Compare products">
+                        <i className="fas fa-exchange-alt text-[17px]"></i>
+                    </button>
+
+                    {/*  Heart Icon button */}
+                    <button className="hover:text-[#7a1533] p-1.5 transition-colors relative" aria-label="Wishlist items">
+                        <i className="far fa-heart text-[18px]"></i>
+                        <span className="absolute top-0 right-0 bg-[#7a1533] text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center transform translate-x-1 -translate-y-1">
+                            4
+                        </span>
+                    </button>
+
+                    {/* Bag Cart Shopping Basket Button Icon */}
+                    <button className="hover:text-[#7a1533] p-1.5 transition-colors relative" aria-label="Shopping Cart bags">
+                        <i className="fas fa-shopping-bag text-[17px]"></i>
+                        <span className="absolute top-0 right-0 bg-[#7a1533] text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center transform translate-x-1 -translate-y-1">
+                            13
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+        </nav>
     );
 };
 
