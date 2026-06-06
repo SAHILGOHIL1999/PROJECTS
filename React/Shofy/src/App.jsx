@@ -12,10 +12,8 @@ import BlogSection from './components/BlogSection';
 import Instagram from './components/Instagram';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
-import HomeCategoryPage from './page/HomeCategory';
 
-
-const Homes = () => (
+const Home = () => (
   <>
     <HeroSlider />
     <InfoBar />
@@ -42,7 +40,6 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/home-category/:categoryName" element={<HomeCategoryPage />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/products" element={<Products />} />
           <Route path="/coupons" element={<Coupons />} />
@@ -54,4 +51,5 @@ function App() {
     </>
   );
 }
+
 export default App;
