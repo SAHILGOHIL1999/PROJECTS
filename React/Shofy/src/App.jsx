@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
+import ScrollToTop from "./components/ScrollToTop";
 import HeroSlider from './components/HeroSlider';
 import InfoBar from './components/InfoBar';
 import BannerSection from './components/BannerSection';
@@ -17,7 +18,6 @@ const Home = () => (
   <>
     <HeroSlider />
     <InfoBar />
-    <Navbar />
     <BannerSection />
     <Category />
     <ProductSection />
@@ -39,6 +39,7 @@ function App() {
       <Router>
         <TopBar />
         <Navbar />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
