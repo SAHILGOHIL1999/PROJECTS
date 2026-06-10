@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
+import silder_1 from '../assets/images/slider-1.png';
+import silder_2 from '../assets/images/slider-2.png';
+import silder_3 from '../assets/images/slider-3.png'; 
 // 1. Centralized Slider Data array for clean maintainability and scalability
 const SLIDES_DATA = [
     {
@@ -7,7 +9,7 @@ const SLIDES_DATA = [
         tagline: "New Arrivals 2026",
         title: <>The Clothing <br /> Collection</>,
         btnText: "Shop Collection",
-        img: "/assets/images/slider/slider-1.png",
+        img: silder_1,
         bgCircle: "bg-[#bce3e9]"
     },
     {
@@ -15,7 +17,7 @@ const SLIDES_DATA = [
         tagline: "Summer Essentials",
         title: <>Trending Minimalist <br /> Outfits</>,
         btnText: "Explore Now",
-        img: "/assets/images/slider/slider-2.png",
+        img: silder_2,
         bgCircle: "bg-[#fbd3e9]"
     },
     {
@@ -23,7 +25,7 @@ const SLIDES_DATA = [
         tagline: "Exclusive Deals",
         title: <>Upgrade Your <br /> Daily Style</>,
         btnText: "Get 20% Off",
-        img: "/assets/images/slider/slider-3.png",
+        img: silder_3,
         bgCircle: "bg-[#ffe0b3]"
     }
 ];
@@ -48,7 +50,7 @@ function HeroSlider() {
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full py-12">
 
                 {/* Left Side: Content Box Group (Re-renders with transition animations on change) */}
-                <div key={`text-${activeSlide.id}`} className="space-y-6 animate-fade-in z-10">
+                <div key={`text-${activeSlide.id}`} className="space-y-6 animate-fade-in z-10 cursor-pointer">
                     <p className="uppercase tracking-widest text-sm font-semibold text-gray-600">
                         {activeSlide.tagline}
                     </p>
@@ -81,7 +83,7 @@ function HeroSlider() {
                     <button
                         key={index}
                         onClick={() => setCurrentSlide(index)}
-                        className={`h-2.5 rounded-full transition-all duration-300 ${index === currentSlide ? 'w-8 bg-black' : 'w-2.5 bg-gray-300 hover:bg-gray-400'
+                        className={`h-2.5 rounded-full transition-all duration-300 ${index === currentSlide ? 'w-8 bg-black' : 'w-2.5 bg-gray-300 hover:bg-gray-400 cursor-pointer'
                             }`}
                         aria-label={`Jump directly to portfolio frame slide banner ${index + 1}`}
                     />

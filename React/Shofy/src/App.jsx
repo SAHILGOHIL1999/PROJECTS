@@ -17,6 +17,7 @@ const Home = () => (
   <>
     <HeroSlider />
     <InfoBar />
+    <Navbar />
     <BannerSection />
     <Category />
     <ProductSection />

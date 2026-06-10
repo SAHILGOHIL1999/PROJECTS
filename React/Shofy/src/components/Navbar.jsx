@@ -1,13 +1,13 @@
   import React from "react";
   import { NavLink } from "react-router-dom";
-  import logo from "../assets/images/logo.png";
+  import logo from "../assets/images/logo.svg";
   import home_1 from "../assets/images/menu-home-1.jpg";
   import home_2 from "../assets/images/menu-home-2.jpg";
   import home_3 from "../assets/images/menu-home-3.jpg";
   import home_4 from "../assets/images/menu-home-4.jpg";
   import home_5 from "../assets/images/menu-home-5.jpg";
-  // import menu_product_1 from "../assets/images/menu-product-1.jpg";
-  // import menu_product_2 from "../assets/images/menu-product-2.jpg";
+  import menu_product_1 from "../assets/images/menu-product-img-1.jpg";
+  import menu_product_2 from "../assets/images/menu-product-img-2.jpg";
 
   // Data for Home Dropdown
   const HOME_DROPDOWN_ITEMS = [
@@ -112,7 +112,7 @@
               {/* Shop Mega Menu Dropdown Container */}
               <div className="absolute top-full left-0 w-[85vw] max-w-[1150px] bg-white border border-gray-100 shadow-xl rounded-2xl p-8 opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 mt-1">
                 <div className="grid grid-cols-5 gap-6">
-                  {/* Left Links Grid Sections (Takes 3 of 5 columns) */}
+                  {/* Left Links Grid Sections */}
                   <div className="col-span-3 grid grid-cols-3 gap-6 text-left">
                     {/* Shop Pages Column */}
                     <div>
