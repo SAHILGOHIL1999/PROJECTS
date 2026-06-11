@@ -1,7 +1,5 @@
 import React from 'react';
 
-// Static array for Instagram post details. 
-// Moving data constants outside the component avoids unnecessary re-allocations on every render cycle.
 const INSTA_POSTS = [
     { id: 1, img: "/assets/images/instagram/insta-1.jpg" },
     { id: 2, img: "/assets/images/instagram/insta-2.jpg" },

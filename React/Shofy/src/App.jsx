@@ -4,7 +4,6 @@ import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
 import ScrollToTop from "./components/ScrollToTop";
 import HeroSlider from './components/HeroSlider';
-import InfoBar from './components/InfoBar';
 import BannerSection from './components/BannerSection';
 import Category from './components/Category';
 import ProductSection from './components/ProductSection';
@@ -17,7 +16,6 @@ import Footer from './components/Footer';
 const Home = () => (
   <>
     <HeroSlider />
-    <InfoBar />
     <BannerSection />
     <Category />
     <ProductSection />

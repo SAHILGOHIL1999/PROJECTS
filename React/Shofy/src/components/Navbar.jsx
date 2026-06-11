@@ -258,7 +258,7 @@ const Navbar = () => {
 
           <NavLink to="/coupons" className={navLinkClasses}>Coupons</NavLink>
 
-          {/* Blog Link Dropdown (UPDATED AS REQUESTED) */}
+          {/* Blog Link Dropdown */}
           <div className="relative group flex items-center h-full cursor-pointer">
             <NavLink to="/blog" className={navLinkClasses}>
               Blog
