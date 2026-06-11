@@ -45,7 +45,7 @@ function TopBar() {
         {/* Right Side: Interactive Selection Menus */}
         <div className="flex items-center gap-6">
           
-          {/* ================= 1. Language Dropdown ================= */}
+          {/* 1. Language Dropdown */}
           <div className="relative">
             <button 
               onClick={() => {
@@ -80,7 +80,7 @@ function TopBar() {
             )}
           </div>
 
-          {/* ================= 2. Currency Dropdown ================= */}
+          {/* 2. Currency Dropdown */}
           <div className="relative">
             <button 
               onClick={() => {
@@ -115,7 +115,7 @@ function TopBar() {
             )}
           </div>
           
-          {/* ================= 3. Setting Dropdown ================= */}
+          {/* 3. Setting Dropdown */}
           <div className="relative">
             <button 
               onClick={() => {
