@@ -34,7 +34,7 @@ function BlogSection() {
                 {BLOG_POSTS.map((post) => (
                     <article key={post.id} className="group cursor-pointer flex flex-col">
                         <div className="relative aspect-[4/3] w-full bg-[#F5F6F8] overflow-hidden mb-5">
-                            <img 
+                            <img
                                 src={post.img} 
                                 alt={post.title} 
                                 className="w-full h-full object-cover transition-transform duration-800 ease-in-out group-hover:scale-125 group-hover:rotate-[8deg]"
