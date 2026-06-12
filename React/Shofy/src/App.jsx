@@ -7,6 +7,8 @@ import HeroSlider from './components/HeroSlider';
 import BannerSection from './components/BannerSection';
 import Category from './components/Category';
 import ProductSection from './components/ProductSection';
+import FeaturedSection from './components/FeaturedSection';
+import TrendingArrivals from './components/TrendingArrivals';
 import ReviewSection from './components/ReviewSection';
 import BlogSection from './components/BlogSection';
 import Instagram from './components/Instagram';
@@ -19,6 +21,8 @@ const Home = () => (
     <BannerSection />
     <Category />
     <ProductSection />
+    <FeaturedSection />
+    <TrendingArrivals />
     <ReviewSection />
     <BlogSection />
     <Instagram />

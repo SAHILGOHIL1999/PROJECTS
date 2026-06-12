@@ -1,47 +1,75 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Insta_1 from '../assets/images/insta-1.jpg';
+import Insta_2 from '../assets/images/insta-2.jpg';
+import Insta_3 from '../assets/images/insta-3.jpg';
+import Insta_4 from '../assets/images/insta-4.jpg';
+import Insta_Icon from '../assets/images/insta-icon.png';
 
-const INSTA_POSTS = [
-    { id: 1, img: "/assets/images/instagram/insta-1.jpg" },
-    { id: 2, img: "/assets/images/instagram/insta-2.jpg" },
-    { id: 3, img: "/assets/images/instagram/insta-3.jpg" },
-    { id: 4, img: "/assets/images/instagram/insta-4.jpg" }
+const instagramImages = [
+    { id: 1, src: Insta_1, alt: "Man in trench coat" },
+    { id: 2, src: Insta_2, alt: "Woman in white hoodie sitting down" },
+    { id: 3, src: Insta_3, alt: "Man in green long sleeve shirt" },
+    { id: 4, src: Insta_4, alt: "Woman in brown sweatshirt smiling" },
 ];
 
-function InstagramStrip() {
+const InstagramSection = () => {
     return (
-        <>
-            <div className="max-w-7xl mx-auto px-6 py-16">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                    {INSTA_POSTS.map((post) => (
-                        <div
-                            key={post.id}
-                            className="relative group overflow-hidden rounded-2xl cursor-pointer"
-                        >
-                            <img
-                                src={post.img}
-                                alt={`Instagram post ${post.id}`}
-                                className="w-full h-72 object-cover group-hover:scale-105 transition duration-500"
-                            />
-                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i className="fab fa-instagram text-4xl text-white transform scale-75 group-hover:scale-100 transition-transform duration-300"></i>
-                            </div>
+        <section className="instagram-section">
+            <div className="instagram-container">
+                <div className="instagram-grid">
+                    
+                    {/* Image 1 */}
+                    <div className="instagram-item">
+                        <img src={instagramImages[0].src} alt={instagramImages[0].alt} />
+                        <div className="instagram-overlay">
+                            <FontAwesomeIcon icon={faInstagram} className="overlay-icon" />
                         </div>
-                    ))}
-                    <div className="col-span-2 md:col-span-1 lg:col-span-1 border-2 border-gray-100 rounded-2xl flex flex-col items-center justify-center p-6 bg-white shadow-sm text-center">
-                        <img
-                            src="/assets/images/instagram/insta-icon.png"
-                            alt="Instagram"
-                            className="w-16 h-16 object-contain"
-                        />
+                    </div>
 
-                        <p className="mt-3 text-sm font-medium text-gray-500 tracking-wider uppercase">Follow Us on</p>
-                        <p className="text-2xl font-bold text-gray-900 mt-0.5">Instagram</p>
+                    {/* Image 2 */}
+                    <div className="instagram-item">
+                        <img src={instagramImages[1].src} alt={instagramImages[1].alt} />
+                        <div className="instagram-overlay">
+                            <FontAwesomeIcon icon={faInstagram} className="overlay-icon" />
+                        </div>
+                    </div>
+
+                    {/* Center Card */}
+                    <div className="instagram-cta-card">
+                        <div className="cta-content">
+                            <div className="cta-icon-wrapper">
+                                <img src={Insta_Icon} alt="Instagram Icon" className="cta-image-icon" />
+                            </div>
+                            <p className="cta-subtitle">Follow Us on</p>
+                            <Link to="/trending-arrivals" className="cta-title">
+                                Instagram
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Image 3 */}
+                    <div className="instagram-item">
+                        <img src={instagramImages[2].src} alt={instagramImages[2].alt} />
+                        <div className="instagram-overlay">
+                            <FontAwesomeIcon icon={faInstagram} className="overlay-icon" />
+                        </div>
+                    </div>
+
+                    {/* Image 4 */}
+                    <div className="instagram-item">
+                        <img src={instagramImages[3].src} alt={instagramImages[3].alt} />
+                        <div className="instagram-overlay">
+                            <FontAwesomeIcon icon={faInstagram} className="overlay-icon" />
+                        </div>
                     </div>
 
                 </div>
             </div>
-        </>
+        </section>
     );
-}
+};
 
-export default InstagramStrip;
+export default InstagramSection;
