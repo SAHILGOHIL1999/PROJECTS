@@ -152,13 +152,13 @@ const Navbar = () => {
           </div>
 
           {/* Shop Link Dropdown */}
-          <div className="relative group flex items-center h-full cursor-pointer">
+          <div className="relative group flex  items-center h-full cursor-pointer">
             <NavLink to="/shop" className={navLinkClasses}>
               Shop
               <i className="fas fa-chevron-down text-[9px] text-gray-400 group-hover:text-[#7a1533] transition-transform duration-300 group-hover:rotate-180"></i>
             </NavLink>
 
-            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-[85vw] max-w-[1150px] bg-white border border-gray-100 shadow-xl rounded-2xl p-8 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 mt-1 transform translate-y-4 group-hover:translate-y-0">
+            <div className="absolute top-full left-[-150px] w-[85vw] max-w-[1150px] bg-white border border-gray-100 shadow-xl rounded-2xl p-8 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 ease-out z-50 mt-1 transform translate-y-4 group-hover:translate-y-0">
               <div className="grid grid-cols-5 gap-6">
                 <div className="col-span-3 grid grid-cols-3 gap-6 text-left">
                   <div>
